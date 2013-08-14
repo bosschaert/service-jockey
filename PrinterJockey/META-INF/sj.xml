@@ -1,0 +1,19 @@
+<service-jockey xmlns="http://www.coderthoughts.org/schemas/sj/v1.0.0">
+  <restrict-visibility>
+    <rule>
+      <bsn>.*</bsn>
+      <service-filter>(objectClass=org.acme.Printer)</service-filter> 
+      <add-filter>(energy-rating&lt;=50)</add-filter>
+    </rule>
+  </restrict-visibility>
+  <proxy-registration>
+    <rule>
+      <service-filter>(&amp;(objectClass=org.acme.Printer)(name=p1))</service-filter>
+      <add-property key="energy-rating">75</add-property>
+    </rule>
+    <rule>
+      <service-filter>(&amp;(objectClass=org.acme.Printer)(name=p7))</service-filter>
+      <add-property key="energy-rating">50</add-property>
+    </rule>
+  </proxy-registration>
+</service-jockey>

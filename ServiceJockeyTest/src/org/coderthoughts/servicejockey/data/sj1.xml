@@ -1,0 +1,22 @@
+<service-jockey xmlns="http://www.coderthoughts.org/schemas/sj/v1.0.0">
+  <restrict-visibility>
+    <rule>
+      <bsn>.*</bsn>
+      <service-filter>(objectClass=*MyService)</service-filter> 
+      <add-filter>(!(osgi.remote=true))</add-filter>
+    </rule>
+  </restrict-visibility>
+  <proxy-registration>
+    <rule>
+      <bsn>org.blah.boo</bsn>
+      <bver>1.2.3</bver>
+      <service-filter>(service.id=12)</service-filter>
+      <add-property key="test">hello</add-property>
+      <add-property key="test2">hi</add-property>
+    </rule>
+    <rule>
+      <service-filter>(service.id=13)</service-filter>
+      <add-property key="foo">bar</add-property>
+    </rule>
+  </proxy-registration>
+</service-jockey>

@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ServiceJockeyTest Fragment
+Bundle-SymbolicName: org.coderthoughts.servicejockeytest
+Bundle-Version: 0.0.1
+Bundle-Vendor: coderthoughts.org
+Fragment-Host: org.coderthoughts.servicejockey
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Import-Package: junit.framework;version="3.8.2",
+ org.mockito;version="1.8.0",
+ org.mockito.invocation;version="1.8.0",
+ org.mockito.stubbing;version="1.8.0"
+Bundle-ClassPath: .
